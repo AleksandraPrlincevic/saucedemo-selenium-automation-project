@@ -9,14 +9,15 @@ After completing manual testing and bug reporting, I selected several test cases
  - Java (OpenJDK 26)
  - IntelliJ IDEA 2026.1
  - Selenium WebDriver 4.43.0
- - TestNG
+ - TestNG 7.12.0
  - Maven
  - Firefox browser
- - Run on Windows 11 Pro
+ - OS: Windows 11 Pro
 
 ## Prerequisites:
- - OpenJDK 26
- - Apache Maven
+ - IntelliJ IDEA (includes bundled Maven — no separate installation needed)
+ - Project SDK: OpenJDK 26
+ - Firefox browser
 
 ## Installation
 
@@ -27,14 +28,22 @@ Clone the repository in IDE terminal:
 git clone https://github.com/AleksandraPrlincevic/projekatITBootcamp.git
 ```
 ## How to run:
-Open the project in IntelliJ IDEA and run test suites directly from the IDE.
+Open the project in IntelliJ IDEA and run tests directly from the IDE.
 
 ## Framework Walkthrough
 
 Packages:
- * base
- * pages
- * components
- * tests
- * utils
+* `base` - base classes: `BasePage` (parent for all Page Objects, handles WebDriver/wait setup)
+  and `BaseTest` (parent for test classes, initializes Page Object instances and WebDriver setup)
+* `pages` - Page Object Model classes for each page of the site
+* `components` — `Header` (reusable, shared across pages) and `InventoryItemComponent`
+* `tests` - test classes
+* `utils` -  test data (username/password)
 
+## What's Covered
+
+* Login — valid/invalid credentials
+* Adding items to cart — from Inventory page and from Single Item page
+* Cart — removing all items, completing checkout with two items in cart
+* Known bug — a test documents that checkout is possible with an empty cart,
+  which should not be allowed (test is written to fail while this bug exists)
