@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import org.testng.ITestResult;
 
 public class AddItemsToCartTest extends BaseTest {
 
@@ -107,8 +108,7 @@ public class AddItemsToCartTest extends BaseTest {
      }
 
     @AfterMethod
-    public void deleteCookies(){
-        driver.manage().deleteAllCookies();
+    public void tearDown(ITestResult result) {
+        driver.quit();
     }
-
 }

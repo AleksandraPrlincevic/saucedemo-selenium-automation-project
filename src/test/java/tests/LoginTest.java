@@ -30,25 +30,26 @@ public class LoginTest  extends BaseTest {
     }
 
 
-@Test(priority = 1)
-public void validLoginTest() {
+    @Test(priority = 1)
+    public void validLoginTest() {
 
-    Assert.assertEquals(headerPage.logoText.getText(), "Swag Labs");
+        Assert.assertEquals(headerPage.logoText.getText(), "Swag Labs");
 
-    loginPage.inputInUsernameField(TestData.validUsername);
-    loginPage.inputInPasswordField(TestData.validPassword);
-    loginPage.clickLoginButton();
+        loginPage.inputInUsernameField(TestData.validUsername);
+        loginPage.inputInPasswordField(TestData.validPassword);
+        loginPage.clickLoginButton();
 
-    shortWait.until(ExpectedConditions.urlToBe("https://www.saucedemo.com/inventory.html"));
+        shortWait.until(ExpectedConditions.urlToBe("https://www.saucedemo.com/inventory.html"));
 
-    String actualURL = driver.getCurrentUrl();
-    String expectedURL = "https://www.saucedemo.com/inventory.html"; // neku vrstu ove asertacije smo vec imali u waitu
-    Assert.assertEquals(actualURL, expectedURL);
+        String actualURL = driver.getCurrentUrl();
+        String expectedURL = "https://www.saucedemo.com/inventory.html"; // neku vrstu ove asertacije smo vec imali u waitu
+        Assert.assertEquals(actualURL, expectedURL);
 
-    Assert.assertTrue(headerPage.cartIcon.isDisplayed());
+        Assert.assertTrue(headerPage.cartIcon.isDisplayed());
 
-    Assert.assertEquals(inventoryPage.addToCartButton.getText(), "Add to cart");
-}
+        Assert.assertEquals(inventoryPage.addToCartButton.getText(), "Add to cart");
+    }
+
     @Test(priority = 10)
     public void invalidUsernameLoginTest() {
 
@@ -135,8 +136,7 @@ public void validLoginTest() {
     }
 
     @AfterMethod
-    public void deleteCookies(){
-        driver.manage().deleteAllCookies();
+    public void tearDown() {
+        driver.quit();
     }
-
 }

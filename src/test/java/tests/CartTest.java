@@ -94,13 +94,9 @@ public class CartTest extends BaseTest {
         Assert.assertTrue(headerPage.getPageTitle().contains("Overview"));
         Assert.assertFalse(checkoutStepOnePage.isCheckoutInfoContainer());
     }
-    /* @Test
-     public void increaseCartItemQuantityByInput(){ //  Test pada jer ne moze da se promeni kolicina itema u Cartu, a trebalo bi da moze
-        cartPage.changeCartQuantity();
-        //DODATI ASERTACIJU
-     }*/
+
     @AfterMethod
-    public void deleteCookies(){
-        driver.manage().deleteAllCookies();
+    public void tearDown() {
+        driver.quit();
     }
 }
