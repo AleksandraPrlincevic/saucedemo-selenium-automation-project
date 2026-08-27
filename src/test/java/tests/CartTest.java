@@ -58,14 +58,14 @@ public class CartTest extends BaseTest {
     }
 
     @Test
-    public void deleteAllItemsFromCart(){
+    public void canDeleteAllItemsFromCart(){
         cartPage.removeAllItemsFromCart();
           Assert.assertFalse(headerPage.isCartBadgeVisible());
           Assert.assertTrue(cartPage.getItemNames().isEmpty());
     }
 
     @Test
-    public void finishOrderFromCartPageWithTwoItemsInCart(){
+    public void canFinishOrderFromCartPageWithTwoItemsInCart(){
            Assert.assertTrue(headerPage.isCartBadgeVisible());
         cartPage.clickCheckoutButton();
            Assert.assertTrue(checkoutStepOnePage.isCheckoutInfoContainer());
@@ -87,7 +87,7 @@ public class CartTest extends BaseTest {
     }
 
     @Test
-    public void checkoutWithEmptyCart() {  // Test pada jer mozemo da kliknemo na Checkout i on nas vodi na CheckoutStepTwoPage, iako ne bi smelo jer je korpa prazna
+    public void canCheckoutWithEmptyCart() {  // Test pada jer mozemo da kliknemo na Checkout i on nas vodi na CheckoutStepTwoPage, iako ne bi smelo jer je korpa prazna
         cartPage.removeAllItemsFromCart();
         Assert.assertFalse(headerPage.isCartBadgeVisible());
         cartPage.clickCheckoutButton();

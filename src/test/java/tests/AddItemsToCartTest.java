@@ -39,7 +39,7 @@ public class AddItemsToCartTest extends BaseTest {
         loginPage.login(TestData.validUsername, TestData.validPassword);
  }
     @Test(priority = 1)
-    public void addOneItemFromInventoryPage() throws InterruptedException {
+    public void canAddOneItemFromInventoryPage() throws InterruptedException {
            Assert.assertFalse(inventoryPage.getInventoryItems().isEmpty());
            Assert.assertFalse(headerPage.isCartBadgeVisible());
         InventoryItemComponent item = inventoryPage.getInventoryItemComponent(chosenRandomItems);
@@ -57,7 +57,7 @@ public class AddItemsToCartTest extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void addThreeItemsFromInventoryPage() throws InterruptedException {
+    public void canAddThreeItemsFromInventoryPage() throws InterruptedException {
         List<WebElement> chosenRandomItems = new ArrayList<>();
            Assert.assertFalse(inventoryPage.getInventoryItems().isEmpty());
            Assert.assertFalse(headerPage.isCartBadgeVisible());
@@ -90,7 +90,7 @@ public class AddItemsToCartTest extends BaseTest {
     }
 
       @Test(priority = 5)
-       public void addItemFromSingleItemPage(){
+       public void canAddItemFromSingleItemPage(){
            Assert.assertFalse(inventoryPage.getInventoryItems().isEmpty());
         InventoryItemComponent item = inventoryPage.getInventoryItemComponent(chosenRandomItems);
         String itemName = item.getItemName();

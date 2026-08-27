@@ -31,7 +31,7 @@ public class LoginTest  extends BaseTest {
 
 
     @Test(priority = 1)
-    public void validLoginTest() {
+    public void canLoginWithValidCredentials() {
 
         Assert.assertEquals(headerPage.logoText.getText(), "Swag Labs");
 
@@ -51,7 +51,7 @@ public class LoginTest  extends BaseTest {
     }
 
     @Test(priority = 10)
-    public void invalidUsernameLoginTest() {
+    public void canNotLoginWithInvalidUsername() {
 
         Assert.assertEquals(headerPage.logoText.getText(), "Swag Labs");
 
@@ -68,7 +68,7 @@ public class LoginTest  extends BaseTest {
     }
 
     @Test(priority = 20)
-    public void invalidPasswordLoginTest() {
+    public void canNotLoginWithInvalidPassword() {
 
         Assert.assertEquals(headerPage.logoText.getText(), "Swag Labs");
 
@@ -85,7 +85,7 @@ public class LoginTest  extends BaseTest {
     }
 
     @Test(priority = 22)
-    public void emptyUsernameLoginTest() {
+    public void canNotLoginWithEmptyUsernameField() {
 
         Assert.assertEquals(headerPage.logoText.getText(), "Swag Labs");
 
@@ -102,7 +102,7 @@ public class LoginTest  extends BaseTest {
     }
 
     @Test(priority = 24)
-    public void emptyPasswordLoginTest() {
+    public void canNotLoginWithEmptyPasswordField() {
 
         Assert.assertEquals(headerPage.logoText.getText(), "Swag Labs");
 
@@ -119,7 +119,7 @@ public class LoginTest  extends BaseTest {
     }
 
     @Test(priority = 26)
-    public void emptyUsernameAndPasswordLoginTest() {
+    public void canNotLoginWithEmptyUsernameAndPasswordFields() {
 
         Assert.assertEquals(headerPage.logoText.getText(), "Swag Labs");
 

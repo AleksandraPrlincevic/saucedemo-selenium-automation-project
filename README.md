@@ -3,6 +3,7 @@
 ## Description:
 SauceDemo is a testing website. This project is the result of a three-month intensive QA course. 
 After completing manual testing and bug reporting, I selected several test cases for automation.
+The manual test cases are included in the project as an Excel file.
 
 
 ## Tech Stack:
@@ -32,14 +33,14 @@ Open the project in IntelliJ IDEA and run tests directly from the IDE.
 
 ## Framework Walkthrough
 
-Packages:
+## Project Structure
 * `base` - base classes: `BasePage` (parent for all Page Objects, handles WebDriver/wait setup)
   and `BaseTest` (parent for test classes, initializes Page Object instances and WebDriver setup)
 * `pages` - Page Object Model classes for each page of the site
 * `components` — `Header` (reusable, shared across pages) and `InventoryItemComponent`
 * `tests` - test classes
 * `utils` -  test data (username/password)
-
+* `test cases` - manual test cases documented in Excel
 ## What's Covered
 
 * Login — valid/invalid credentials
