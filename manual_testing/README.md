@@ -11,4 +11,6 @@ length, and required/forbidden characters.
 - SauceDemo_test_cases - covering login, cart functionality, checkout flow and customer information form
 - SauceDemo_test_run - Test execution results
 - SauceDemo_bug_report - 4 bug reports
-
+- Screenshots:
+ * screenshots/bugs/ - screenshots showing bugs on the SauceDemo site
+ * screenshots/jira/ - screenshots of the same bug reports recreated in Jira, included to demonstrate familiarity with the tool.
