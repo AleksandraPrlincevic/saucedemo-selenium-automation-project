@@ -3,7 +3,7 @@
 ## Description:
 SauceDemo is a testing website. This project is the result of a three-month intensive QA course. 
 After completing manual testing and bug reporting, I selected several test cases for automation.
-The manual test cases are included in the project as an Excel file.
+The manual test documentation is included in the project as Excel files.
 
 
 ## Tech Stack:
@@ -40,7 +40,7 @@ Open the project in IntelliJ IDEA and run tests directly from the IDE.
 * `components` — `Header` (reusable, shared across pages) and `InventoryItemComponent`
 * `tests` - test classes
 * `utils` -  test data (username/password)
-* `test cases` - manual test cases documented in Excel
+* `manual_testing` - manual testing documented in Excel
 ## What's Covered
 
 * Login — valid/invalid credentials
